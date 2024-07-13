@@ -20,7 +20,8 @@ class Address
     std::string convert_to_string (Address *address)
     {
       return address->city + ", " + address->street + ", " + std::to_string(address->house) + ", " + std::to_string(address->room);  
-    };
+    }
+    ~Address() {}
 };
 
 int main() 
@@ -61,7 +62,7 @@ int main()
 
   for (int i = 0; i < n; i++)
     {
-      delete[] address[i];
+      delete address[i];
     }
   delete[] address;
     
