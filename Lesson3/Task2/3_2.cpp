@@ -21,11 +21,15 @@ class Address
     {
       return address->city + ", " + address->street + ", " + std::to_string(address->house) + ", " + std::to_string(address->room);  
     };
-      char get_city_firstcase (Address *address)
+
+    std::string getData ()
     {
-       return this->city[1]; 
-    }
+      return this->city;
+    };
+
 };
+void sort_array(Address **address, int n);
+
 
 int main() 
 {
@@ -50,29 +54,6 @@ int main()
           address[i] = new Address{city, street, house, room};
         }
     }
-  for (int i = 0; i < (n-1); i++)
-    {
-      for (int j = 0; j < (n-1); j++)
-        { 
-        
-        }
-    }
-  bool swapped = false;
-  do
-    {
-      swapped = false;
-      for (int i = 0; i < n; i++)
-      {
-        char ch = address[i] -> get_city_firstcase(address[i]);
-        char ch1 = address[i] -> get_city_firstcase(address[i+1]); 
-        if (ch > ch1)
-        {
-          std::swap (address[i], address[i+1]);
-          swapped = true;
-        }
-      }
-    } while (swapped);
-  
   std::ofstream record_text ("out.txt");
   if (!record_text.is_open())
     {
@@ -80,6 +61,8 @@ int main()
       return 0;
     }
   record_text << n << std::endl;
+  sort_array(address, n);
+
   for (int i = 0; i < n; i++)
     {
       record_text << address[i]->convert_to_string(address[i]) << std::endl;
@@ -87,7 +70,7 @@ int main()
 
   for (int i = 0; i < n; i++)
     {
-      delete[] address[i];
+      delete address[i];
     }
   delete[] address;
 
@@ -95,4 +78,21 @@ int main()
   read_text.close();
 
   return 0;
+}
+
+void sort_array (Address** address, int n)
+{
+  bool swapped = false;
+  do
+  {
+    swapped = false;
+    for (int i = 1; i < n; i++)
+    {
+      if (address[i]->getData() < address[i-1]->getData())
+        {
+          std::swap (address[i], address[i-1]);
+          swapped = true;
+        }
+    }
+  } while (swapped);
 }
