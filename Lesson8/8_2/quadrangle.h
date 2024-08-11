@@ -10,11 +10,9 @@ class Quadrangle : public Figure
         int side_number;
     public:
     Quadrangle (int side_number, double sideA, double sideB, double sideC, double sideD, double angleA, double angleB, double angleC, double angleD):
-    Figure (name, side_number), side_number(side_number), sideA_(sideA), sideB_(sideB), sideC_(sideC), sideD_(sideD), angleA_(angleA), angleB_(angleB),
-             angleC_(angleC), angleD_(angleD)
+    Figure ("Четырехугольник", side_number), side_number(side_number), sideA_(sideA), sideB_(sideB), sideC_(sideC), sideD_(sideD), angleA_(angleA), angleB_(angleB), angleC_(angleC), angleD_(angleD)
     {
         check();
-        this->name = "Четырехугольник";
     }
     std::string get_name ();
     int get_side_number ();

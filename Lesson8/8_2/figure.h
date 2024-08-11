@@ -14,7 +14,6 @@ class Figure
         this->name = name;
         this->side_number = side_number;
     }
-    Figure():Figure("Фигура", 0) {}
 
     std::string get_name();
     double get_side_number();  

@@ -3,15 +3,7 @@
 #include <exception>
 #include <stdexcept>
 
-class FigureException : public std::exception
+class FigureException : public std::domain_error
 {
-    private:
-        std::string message;
-    public:
-        FigureException(std::string message) : message{message} {}
-
-        const char* what() const noexcept override
-        {
-            return message.c_str();
-        }
+    using std::domain_error::domain_error;
 };  

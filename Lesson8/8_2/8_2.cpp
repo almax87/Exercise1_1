@@ -61,7 +61,7 @@ int main ()
     }
     try
     {
-        Figure* quadrangle = new Quadrangle(4, 4, 10, 5, 6, 50, 80, 50, 100);
+        Figure* quadrangle = new Quadrangle{4, 4, 10, 5, 6, 50, 80, 50, 100};
         quadrangle->print_created();
     }
     catch(const std::exception& ex)
