@@ -1,6 +1,12 @@
 #include "Fraction.h"
 #include "Fraction.cpp"
 
+void print_operation(char symb, Fraction* fraction1, Fraction* fraction2, Fraction* fraction3)
+{
+     std::cout << Fraction::print_fraction(fraction1) << " " << symb << " " << Fraction::print_fraction(fraction2)<< " = " 
+                << Fraction::print_fraction(fraction3) << std::endl;
+}
+
 int main()
 {
     int f1_num{}, f1_denom{},f2_num{}, f2_denom{}; 
@@ -18,23 +24,20 @@ int main()
 
     *fraction3 = *fraction1 + *fraction2;
     Fraction::shorten_fraction(fraction3);
-    std::cout << Fraction::print_fraction(fraction1) << " + " << Fraction::print_fraction(fraction2)<< " = " 
-                << Fraction::print_fraction(fraction3) << std::endl;
+    print_operation('+',fraction1,fraction2,fraction3);
     *fraction3 = *fraction1 - *fraction2;
     Fraction::shorten_fraction(fraction3);
-    std::cout << Fraction::print_fraction(fraction1) << " - " << Fraction::print_fraction(fraction2)<< " = " 
-                << Fraction::print_fraction(fraction3) << std::endl;
+    print_operation('-',fraction1,fraction2,fraction3);
     *fraction3 = *fraction1 * *fraction2;
     Fraction::shorten_fraction(fraction3);
-    std::cout << Fraction::print_fraction(fraction1) << " * " << Fraction::print_fraction(fraction2)<< " = " 
-                << Fraction::print_fraction(fraction3) << std::endl;
+    print_operation('*',fraction1,fraction2,fraction3);
     *fraction3 = *fraction1 / *fraction2;
     Fraction::shorten_fraction(fraction3);
-    std::cout << Fraction::print_fraction(fraction1) << " / " << Fraction::print_fraction(fraction2)<< " = " 
-                << Fraction::print_fraction(fraction3) << std::endl;
+    print_operation('/',fraction1,fraction2,fraction3);
     *fraction3 = (++(*fraction1))*(*fraction2);
     Fraction::shorten_fraction(fraction3);
     --(*fraction1);
+    
     std::cout << "++" << Fraction::print_fraction(fraction1) << " * " << Fraction::print_fraction(fraction2) 
                 << " = " << Fraction::print_fraction(fraction3) << std::endl;
     ++(*fraction1);
@@ -49,3 +52,4 @@ int main()
 
 	return 0;
 }
+
