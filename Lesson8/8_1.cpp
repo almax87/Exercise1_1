@@ -1,12 +1,14 @@
 #include <iostream>
 #include <string>
+#include <exception>
+#include <stdexcept>
 
 int function (std::string &str, int forbidden_length)
 {
     if (str.length() != forbidden_length)
         return(str.length());
     else
-        throw "Вы ввели слово запретной длины! До свидания";        
+        throw std::runtime_error("Вы ввели слово запретной длины! До свидания");        
 }
 
 int main()
@@ -26,12 +28,12 @@ int main()
             std::cout << "Длина слова " << str << " равна " << str_length << std::endl;
         }
     
-        catch (const char* bad_length)
+        catch (std::runtime_error& bad_length)
         {
-            std::cout << bad_length << std::endl;
+            std::cout << bad_length.what() << std::endl;
             return 0;
         }
-        catch (...)
+        catch (std::exception)
         {
             std::cout << "Неизвестная ошибка" << std::endl;
             return 1;

@@ -20,4 +20,3 @@ void Triangle::check()
     else if (side_number != 3)
         throw FigureException {"количество сторон не равно 3"};
 }
-

@@ -5,12 +5,10 @@
 
     void Figure::check()
     {
-        std::cout << "";
     }
 
     void Figure::print_created()
     {
-        std::cout << "";
     }
     
 
