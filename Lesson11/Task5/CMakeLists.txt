@@ -1,0 +1,7 @@
+cmake_minimum_required (VERSION 3.20)
+set (RUNTIME_OUTPUT_DIRECTORY ./bin)
+project(figures)
+include_directories(dynamic_lib)
+add_subdirectory(dynamic_lib)
+add_executable(figures 8_2.cpp)
+target_link_libraries(figures figure_lib)

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+set(RUNTIME_OUTPUT_DIRECTORY ../bin)
+project(figure_lib)
+set(dll_files equilateral_triangle.cpp exception.cpp figure.cpp isosceles_triangle.cpp parallelogramm.cpp quadrangle.cpp rectangle.cpp right_triangle.cpp romb.cpp square.cpp triangle.cpp)
+add_library(figure_lib SHARED ${dll_files})

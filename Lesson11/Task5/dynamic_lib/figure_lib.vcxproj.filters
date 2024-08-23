@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\equilateral_triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\figure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\isosceles_triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\parallelogramm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\quadrangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\right_triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\romb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\square.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\almax\source\repos\Lesson11\Task5\dynamic_lib\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7F58D7DF-DAC3-3765-8C4E-143E7F85493F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
