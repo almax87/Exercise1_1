@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 3.20)
+project (race)
+include_directories (dynamic_lib)
+add_executable(race main.cpp)
+add_subdirectory(dynamic_lib)
+target_link_libraries(race dynamic_lib)

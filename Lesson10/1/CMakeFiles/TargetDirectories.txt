@@ -1,0 +1,3 @@
+/home/almax/Documents/Studies/Netology/CPP_base/Lesson10/1/CMakeFiles/my_first_cmake_program.dir
+/home/almax/Documents/Studies/Netology/CPP_base/Lesson10/1/CMakeFiles/edit_cache.dir
+/home/almax/Documents/Studies/Netology/CPP_base/Lesson10/1/CMakeFiles/rebuild_cache.dir
